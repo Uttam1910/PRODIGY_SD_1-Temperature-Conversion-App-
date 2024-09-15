@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">TempConvert</a>
+            <ul>
+                <li><a href="#converter">Convert</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#chart">Chart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="converter">
+        <h1>Temperature Conversion</h1>
+        <p>Convert temperatures between Celsius, Fahrenheit, and Kelvin.</p>
+        <form>
+            <label for="temp">Temperature:</label>
+            <input type="number" id="temp" name="temp" required>
+            <label for="unit">Unit:</label>
+            <select id="unit" name="unit" required>
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+            </select>
+            <button type="button" onclick="convertTemperature()">Convert</button>
+        </form>
+        <div id="results">
+            <p id="result-celsius"></p>
+            <p id="result-fahrenheit"></p>
+            <p id="result-kelvin"></p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Temperature Scales</h2>
+        <p>Temperature is a measure of the warmth or coldness of an object or environment. It is measured in various scales:</p>
+        <ul>
+            <li><strong>Celsius (°C):</strong> Used in most of the world for everyday temperature measurements.</li>
+            <li><strong>Fahrenheit (°F):</strong> Mainly used in the United States for weather and cooking temperatures.</li>
+            <li><strong>Kelvin (K):</strong> Used in scientific contexts, especially in physics and chemistry.</li>
+        </ul>
+    </section>
+
+    <section id="chart">
+        <h2>Temperature Scales Chart</h2>
+        <div class="chart-container">
+            <img src="{{ url_for('static', filename='images/temperature_chart.png') }}" alt="Temperature Conversion Chart">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, please reach out to us at <a href="mailto:support@tempconvert.com">support@tempconvert.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TempConvert. All rights reserved.</p>
+    </footer>
+</body>
+</html>

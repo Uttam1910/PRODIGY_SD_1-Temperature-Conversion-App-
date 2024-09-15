@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a0c4ff;
+}
+
+/* Sections */
+section {
+    padding: 4em 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 4em; /* Ensure sections are below the fixed navbar */
+}
+
+section h1, section h2 {
+    color: #003366;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+#converter form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#converter form label {
+    font-weight: bold;
+}
+
+#converter form input, #converter form select {
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#converter form button {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    padding: 0.75em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#converter form button:hover {
+    background-color: #002244;
+}
+
+#results {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    border: 1px solid #b3e5fc;
+}
+
+#results p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Chart Section */
+.chart-container {
+    text-align: center;
+}
+
+.chart-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
