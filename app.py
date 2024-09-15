@@ -1,97 +1,36 @@
-<<<<<<< HEAD
 from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-# Temperature conversion logic
-def convert_temperature(temp_value, original_unit):
-    celsius, fahrenheit, kelvin = None, None, None
-    
-    if original_unit == 'celsius':
-        fahrenheit = (temp_value * 9/5) + 32
-        kelvin = temp_value + 273.15
-        celsius = temp_value
-    elif original_unit == 'fahrenheit':
-        celsius = (temp_value - 32) * 5/9
-        kelvin = (temp_value - 32) * 5/9 + 273.15
-        fahrenheit = temp_value
-    elif original_unit == 'kelvin':
-        celsius = temp_value - 273.15
-        fahrenheit = (temp_value - 273.15) * 9/5 + 32
-        kelvin = temp_value
-
-    return {
-        'celsius': round(celsius, 2),
-        'fahrenheit': round(fahrenheit, 2),
-        'kelvin': round(kelvin, 2)
-    }
-
-# Route to render the HTML page
 @app.route('/')
 def index():
     return render_template('index.html')
 
-# Route for temperature conversion (AJAX call)
 @app.route('/convert', methods=['POST'])
-def convert():
-    data = request.json
-    temp_value = float(data['temperature'])
-    original_unit = data['unit']
-    
-    # Convert temperature
-    result = convert_temperature(temp_value, original_unit)
-    
-    # Return the result as JSON
-    return jsonify(result)
+def convert_temperature():
+    data = request.get_json()
+    temp = float(data['temperature'])
+    unit = data['unit']
 
-if __name__ == '__main__':
-    app.run(debug=True)
-=======
-from flask import Flask, render_template, request, jsonify
+    if unit == 'celsius':
+        celsius = temp
+        fahrenheit = (temp * 9/5) + 32
+        kelvin = temp + 273.15
+    elif unit == 'fahrenheit':
+        celsius = (temp - 32) * 5/9
+        fahrenheit = temp
+        kelvin = celsius + 273.15
+    elif unit == 'kelvin':
+        celsius = temp - 273.15
+        fahrenheit = (celsius * 9/5) + 32
+        kelvin = temp
 
-app = Flask(__name__)
-
-# Temperature conversion logic
-def convert_temperature(temp_value, original_unit):
-    celsius, fahrenheit, kelvin = None, None, None
-    
-    if original_unit == 'celsius':
-        fahrenheit = (temp_value * 9/5) + 32
-        kelvin = temp_value + 273.15
-        celsius = temp_value
-    elif original_unit == 'fahrenheit':
-        celsius = (temp_value - 32) * 5/9
-        kelvin = (temp_value - 32) * 5/9 + 273.15
-        fahrenheit = temp_value
-    elif original_unit == 'kelvin':
-        celsius = temp_value - 273.15
-        fahrenheit = (temp_value - 273.15) * 9/5 + 32
-        kelvin = temp_value
-
-    return {
+    # Returning results as a JSON response
+    return jsonify({
         'celsius': round(celsius, 2),
         'fahrenheit': round(fahrenheit, 2),
         'kelvin': round(kelvin, 2)
-    }
-
-# Route to render the HTML page
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-# Route for temperature conversion (AJAX call)
-@app.route('/convert', methods=['POST'])
-def convert():
-    data = request.json
-    temp_value = float(data['temperature'])
-    original_unit = data['unit']
-    
-    # Convert temperature
-    result = convert_temperature(temp_value, original_unit)
-    
-    # Return the result as JSON
-    return jsonify(result)
+    })
 
 if __name__ == '__main__':
     app.run(debug=True)
->>>>>>> origin/master
