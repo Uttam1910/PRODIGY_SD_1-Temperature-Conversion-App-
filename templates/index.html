@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Conversion App</title>
+    <title>Professional Temperature Converter</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#" class="logo">TempConvert</a>
+            <a href="#" class="logo">TempConvert Pro</a>
             <ul>
                 <li><a href="#converter">Convert</a></li>
                 <li><a href="#about">About</a></li>
@@ -19,52 +22,126 @@
             </ul>
         </nav>
     </header>
-    
-    <section id="converter">
-        <h1>Temperature Conversion</h1>
-        <p>Convert temperatures between Celsius, Fahrenheit, and Kelvin.</p>
-        <form>
-            <label for="temp">Temperature:</label>
-            <input type="number" id="temp" name="temp" required>
-            <label for="unit">Unit:</label>
-            <select id="unit" name="unit" required>
-                <option value="celsius">Celsius (°C)</option>
-                <option value="fahrenheit">Fahrenheit (°F)</option>
-                <option value="kelvin">Kelvin (K)</option>
-            </select>
-            <button type="button" onclick="convertTemperature()">Convert</button>
-        </form>
-        <div id="results">
-            <p id="result-celsius"></p>
-            <p id="result-fahrenheit"></p>
-            <p id="result-kelvin"></p>
-        </div>
-    </section>
 
-    <section id="about">
-        <h2>About Temperature Scales</h2>
-        <p>Temperature is a measure of the warmth or coldness of an object or environment. It is measured in various scales:</p>
-        <ul>
-            <li><strong>Celsius (°C):</strong> Used in most of the world for everyday temperature measurements.</li>
-            <li><strong>Fahrenheit (°F):</strong> Mainly used in the United States for weather and cooking temperatures.</li>
-            <li><strong>Kelvin (K):</strong> Used in scientific contexts, especially in physics and chemistry.</li>
-        </ul>
-    </section>
+    <main>
+        <section id="converter">
+            <div class="container">
+                <h1>Temperature Conversion</h1>
+                <p>Convert temperatures between Celsius, Fahrenheit, and Kelvin with ease.</p>
+                <form id="conversion-form">
+                    <div class="input-group">
+                        <label for="temp">Enter Temperature</label>
+                        <input type="number" id="temp" name="temp" required placeholder="Enter temperature">
+                    </div>
+                    <div class="input-group">
+                        <label for="unit">Choose Unit</label>
+                        <select id="unit" name="unit" required>
+                            <option value="celsius">Celsius (°C)</option>
+                            <option value="fahrenheit">Fahrenheit (°F)</option>
+                            <option value="kelvin">Kelvin (K)</option>
+                        </select>
+                    </div>
+                    <button type="button" class="convert-btn" onclick="convertTemperature()">Convert</button>
+                </form>
+                <div id="results" class="results-box">
+                    <p id="result-celsius"></p>
+                    <p id="result-fahrenheit"></p>
+                    <p id="result-kelvin"></p>
+                </div>
+            </div>
+        </section>
 
-    <section id="chart">
-        <h2>Temperature Scales Chart</h2>
-        <div class="chart-container">
-            <img src="{{ url_for('static', filename='images/temperature_chart.png') }}" alt="Temperature Conversion Chart">
-        </div>
-    </section>
+        <section id="about">
+            <div class="container">
+                <h2>About Temperature Scales</h2>
+                <p>Temperature is measured using different scales. Here's a quick guide:</p>
+                <ul>
+                    <li><strong>Celsius (°C):</strong> Used worldwide, except for the US, for most temperature measurements.</li>
+                    <li><strong>Fahrenheit (°F):</strong> Primarily used in the US for weather, cooking, and some industrial purposes.</li>
+                    <li><strong>Kelvin (K):</strong> The scientific temperature scale used in physics and chemistry.</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or feedback, please reach out to us at <a href="mailto:support@tempconvert.com">support@tempconvert.com</a>.</p>
-    </section>
+        <section id="chart">
+            <div class="container">
+                <h2>Temperature Conversion Chart</h2>
+                <p>Below is a chart that illustrates the relationship between different temperature scales:</p>
+                <section id="chart">
+                    <div class="container">
+                        <h2>Temperature Conversion Table</h2>
+                        <p>Here’s a simple table illustrating the conversion between Celsius (°C), Fahrenheit (°F), and Kelvin (K):</p>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Celsius (°C)</th>
+                                        <th>Fahrenheit (°F)</th>
+                                        <th>Kelvin (K)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>32</td>
+                                        <td>273.15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>50</td>
+                                        <td>283.15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>68</td>
+                                        <td>293.15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30</td>
+                                        <td>86</td>
+                                        <td>303.15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>40</td>
+                                        <td>104</td>
+                                        <td>313.15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>50</td>
+                                        <td>122</td>
+                                        <td>323.15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>60</td>
+                                        <td>140</td>
+                                        <td>333.15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>100</td>
+                                        <td>212</td>
+                                        <td>373.15</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions or feedback? Reach out to us at <a href="mailto:support@tempconvertpro.com">support@tempconvertpro.com</a>.</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 TempConvert. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 TempConvert Pro. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
