@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Temperature Conversion Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Full-width Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#converter">Converter</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Full-page Sections -->
+    <section id="home">
+        <h1>Welcome to the Temperature Conversion Tool</h1>
+        <p>Convert temperatures between Celsius, Fahrenheit, and Kelvin in a professional, easy-to-use interface.</p>
+        <a href="#converter" class="button">Start Converting</a>
+    </section>
+
+    <section id="converter">
+        <h2>Temperature Converter</h2>
+        <p>Input a temperature and choose the starting unit. The tool will convert the temperature to all other units.</p>
+
+        <!-- Conversion Form -->
+        <form id="conversion-form">
+            <label for="temperature">Enter Temperature:</label>
+            <input type="number" id="temperature" name="temperature" placeholder="Temperature value" required>
+
+            <label for="unit">Select Unit:</label>
+            <select id="unit" name="unit" required>
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+
+            <button type="button" id="convert-btn">Convert</button>
+        </form>
+
+        <!-- Results Section -->
+        <div id="results">
+            <p id="celsius-result"></p>
+            <p id="fahrenheit-result"></p>
+            <p id="kelvin-result"></p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About This Tool</h2>
+        <p>This professional temperature conversion tool is designed to provide accurate and easy conversions between different temperature units, such as Celsius, Fahrenheit, and Kelvin. Whether you're a student, scientist, or just curious about temperatures, our tool helps you get the job done quickly and reliably.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For any inquiries or support, feel free to contact us at support@temperatureconvert.com or call us at +1 (555) 123-4567.</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Temperature Conversion Tool. All rights reserved.</p>
+    </footer>
+
+    <!-- Include JavaScript for conversion logic -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
