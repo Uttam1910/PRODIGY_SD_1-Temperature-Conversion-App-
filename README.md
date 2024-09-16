@@ -21,7 +21,7 @@ A professional web app built with Flask and JavaScript that converts temperature
 
 ## 🌍 Live Demo
 
-Check out the [Live Demo](https://your-live-demo-link.com) (optional).
+Check out the [Live Demo](https://your-live-demo-link.com) .
 
 ## 🖥️ Local Development Setup
 
