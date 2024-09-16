@@ -150,10 +150,25 @@
         </div>
     </footer>
 
+    <!-- Updated JavaScript for mobile menu toggle and closing on click -->
     <script>
-        document.querySelector('.navbar-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.navbar-menu').classList.toggle('active');
+        // Get the hamburger menu button and the navigation menu
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+        const menuLinks = document.querySelectorAll('.navbar-menu li a');
+
+        // Toggle the menu when the hamburger button is clicked
+        navbarToggle.addEventListener('click', () => {
+            navbarToggle.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+        });
+
+        // Close the menu when a menu item is clicked
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbarToggle.classList.remove('active');
+                navbarMenu.classList.remove('active');
+            });
         });
     </script>
 </body>

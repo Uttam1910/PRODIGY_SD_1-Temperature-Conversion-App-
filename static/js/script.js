@@ -22,3 +22,4 @@ function convertTemperature() {
     document.getElementById('result-fahrenheit').innerText = `Fahrenheit: ${fahrenheit.toFixed(2)} °F`;
     document.getElementById('result-kelvin').innerText = `Kelvin: ${kelvin.toFixed(2)} K`;
 }
+
