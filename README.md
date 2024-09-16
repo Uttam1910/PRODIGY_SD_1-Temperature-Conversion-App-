@@ -37,7 +37,7 @@ Follow these instructions to run the project locally:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/Temperature-Conversion-App.git
+   git clone https://github.com/uttam1910/Temperature-Conversion-App.git
 
 2. Navigate to the project directory:
 
@@ -73,10 +73,10 @@ Click Convert to see the results.
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](https://your-image-link.com)
+![Home Page]![alt text](image.png)
 
 ### Temperature Converter
-![Converter](https://your-image-link.com)
+![Converter]![alt text](image-1.png)
 
 ## 🤝 Contributing
 
