@@ -14,12 +14,19 @@
     <header>
         <nav>
             <a href="#" class="logo">TempConvert Pro</a>
-            <ul>
-                <li><a href="#converter">Convert</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#chart">Chart</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar-menu">
+                <ul>
+                    <li><a href="#converter">Convert</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#chart">Chart</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -126,7 +133,6 @@
                         </div>
                     </div>
                 </section>
-                
             </div>
         </section>
 
@@ -143,5 +149,12 @@
             <p>&copy; 2024 TempConvert Pro. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.navbar-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
