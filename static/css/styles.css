@@ -1,19 +1,19 @@
 /* Basic Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    color: #e0e0e0; /* Light gray text */
+    color: #333; /* Dark gray text */
     margin: 0;
-    background-color: #1f1f1f; /* Dark gray background */
+    background-color: #f4f7f9; /* Light gray background */
     padding-top: 60px; /* Space for fixed header */
 }
 
 header {
-    background-color: #2c3e50; /* Darker blue-gray */
-    color: #ecf0f1; /* Light gray */
+    background-color: #3498db; /* Soft blue */
+    color: #fff; /* White text */
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
     z-index: 1000; /* Ensure header is above other content */
 }
 
@@ -27,7 +27,7 @@ nav {
 nav a.logo {
     font-size: 1.6rem;
     font-weight: bold;
-    color: #ecf0f1; /* Light gray */
+    color: #fff; /* White */
     text-decoration: none;
 }
 
@@ -48,15 +48,15 @@ nav a.logo {
 }
 
 .navbar-menu a {
-    color: #ecf0f1; /* Light gray */
+    color: #fff; /* White */
     text-decoration: none;
     padding: 0.5em 1em;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-menu a:hover {
-    background-color: #34495e; /* Subtle dark blue-gray */
-    color: #f39c12; /* Bright yellow-orange */
+    background-color: #2980b9; /* Slightly darker blue */
+    color: #f1c40f; /* Bright gold */
     border-radius: 5px;
 }
 
@@ -74,7 +74,7 @@ nav a.logo {
     display: block;
     width: 25px;
     height: 3px;
-    background: #ecf0f1; /* Light gray */
+    background: #fff; /* White */
     margin: 5px 0;
     transition: all 0.3s;
 }
@@ -92,17 +92,17 @@ nav a.logo {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Menu with Transparency */
+/* Mobile Menu */
 .navbar-menu.active {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: rgba(44, 62, 80, 0.8); /* Transparent dark blue-gray */
+    background-color: rgba(52, 152, 219, 0.9); /* Transparent blue */
     position: absolute;
     top: 60px; /* Below the fixed header */
     left: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for mobile menu */
-    backdrop-filter: blur(5px); /* Optional blur effect for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    backdrop-filter: blur(5px); /* Optional blur effect */
 }
 
 .navbar-menu.active ul {
@@ -122,14 +122,14 @@ nav a.logo {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2em;
-    background-color: #2e3b4e; /* Medium dark blue-gray */
+    background-color: #ffffff; /* White */
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 /* Headings */
 h1, h2 {
-    color: #f39c12; /* Bright yellow-orange */
+    color: #3498db; /* Soft blue */
 }
 
 p, ul {
@@ -154,16 +154,16 @@ ul {
 input, select {
     width: 100%;
     padding: 0.8em;
-    border: 1px solid #34495e; /* Dark blue-gray */
+    border: 1px solid #bdc3c7; /* Light gray */
     border-radius: 5px;
     font-size: 1.1rem;
-    background-color: #3b4d6a; /* Darker blue-gray */
-    color: #ecf0f1; /* Light gray */
+    background-color: #ecf0f1; /* Very light gray */
+    color: #333; /* Dark gray */
 }
 
 .convert-btn {
-    background-color: #f39c12; /* Bright yellow-orange */
-    color: black;
+    background-color: #e67e22; /* Bright orange */
+    color: white;
     padding: 0.8em 1.5em;
     font-size: 1.1rem;
     border: none;
@@ -173,16 +173,16 @@ input, select {
 }
 
 .convert-btn:hover {
-    background-color: #e67e22; /* Slightly darker orange */
+    background-color: #d35400; /* Darker orange */
 }
 
 /* Results Box */
 .results-box {
     margin-top: 2em;
-    background-color: #3b4d6a; /* Darker blue-gray */
+    background-color: #ecf0f1; /* Very light gray */
     padding: 1.5em;
     border-radius: 5px;
-    border: 1px solid #34495e; /* Dark blue-gray */
+    border: 1px solid #bdc3c7; /* Light gray */
 }
 
 /* Chart Section */
@@ -202,14 +202,14 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
-    background-color: #2e3b4e; /* Medium dark blue-gray */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Softer shadow */
-    border: 1px solid #34495e; /* Dark blue-gray */
+    background-color: #ffffff; /* White */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border: 1px solid #bdc3c7; /* Light gray */
 }
 
 thead {
-    background-color: #34495e; /* Dark blue-gray */
-    color: #f39c12; /* Bright yellow-orange */
+    background-color: #3498db; /* Soft blue */
+    color: #fff; /* White */
 }
 
 thead th {
@@ -220,16 +220,16 @@ thead th {
 tbody td {
     padding: 1em;
     text-align: center;
-    color: #bdc3c7; /* Lighter gray */
-    border-bottom: 1px solid #34495e; /* Dark blue-gray */
+    color: #333; /* Dark gray */
+    border-bottom: 1px solid #bdc3c7; /* Light gray */
 }
 
 tbody tr:nth-child(even) {
-    background-color: #3b4d6a; /* Darker blue-gray */
+    background-color: #f4f7f9; /* Light gray */
 }
 
 tbody tr:hover {
-    background-color: #34495e; /* Dark blue-gray */
+    background-color: #ecf0f1; /* Very light gray */
 }
 
 th, td {
@@ -249,11 +249,11 @@ th, td {
 
 /* Footer */
 footer {
-    background-color: #2c3e50; /* Darker blue-gray */
-    color: #ecf0f1; /* Light gray */
+    background-color: #3498db; /* Soft blue */
+    color: rgb(19, 14, 14);
     text-align: center;
     padding: 1.5em;
-    border-top: 1px solid #34495e; /* Dark blue-gray */
+    border-top: 1px solid #bdc3c7; /* Light gray */
 }
 
 footer p {
@@ -271,12 +271,12 @@ footer p {
         display: none; /* Hide the menu by default */
         flex-direction: column; /* Ensure the menu stacks vertically */
         width: 100%;
-        background-color: rgba(44, 62, 80, 0.8); /* Transparent dark blue-gray */
+        background-color: rgba(52, 152, 219, 0.9); /* Transparent blue */
         position: absolute;
         top: 60px; /* Position below the header */
         left: 0;
         z-index: 100;
-        backdrop-filter: blur(5px); /* Add blur effect for transparency */
+        backdrop-filter: blur(5px); /* Add blur effect */
     }
 
     /* Show the menu when the toggle button is active */
