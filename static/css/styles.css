@@ -147,34 +147,60 @@ ul {
     padding: 2em;
 }
 
-.input-group {
-    margin: 1em 0;
-}
-
-input, select {
-    width: 100%;
-    padding: 0.8em;
-    border: 1px solid #bdc3c7; /* Light gray */
+/* Common styles for both input and select *//* Common styles for input and select to ensure equal width and height */
+input[type="number"], select {
+    width: 48%; /* Adjusted width for both input and select */
+    height: 45px; /* Equal height */
+    padding: 0.5em;
+    border: 1px solid #ccc; /* Light gray for borders */
     border-radius: 5px;
     font-size: 1.1rem;
-    background-color: #ecf0f1; /* Very light gray */
-    color: #333; /* Dark gray */
+    background-color: #f7f7f7; /* Lighter background */
+    color: #333; /* Darker text color for better readability */
+    box-sizing: border-box; /* Prevents padding from affecting width */
+    margin: 0; /* Ensures alignment without extra margins */
 }
 
+/* Container for aligning input and select */
+.input-group {
+    display: flex;
+    justify-content: space-between; /* Aligns input and select side by side */
+    gap: 1%; /* Minimal space between input and select */
+    width: 100%; /* Ensures full width is used */
+    max-width: 500px; /* Optional: limit the width for a more compact layout */
+    margin: 0 auto; /* Center the form */
+}
+
+/* Aligning text inside input box */
+input[type="number"] {
+    text-align: left; /* Align text inside the input box to the left */
+}
+
+/* Optional: Hover styles for better interaction */
+input[type="number"]:hover, select:hover {
+    border-color: #888; /* Slightly darker border on hover */
+}
+
+/* Styling the submit button */
+/* Styling the Convert button */
 .convert-btn {
-    background-color: #e67e22; /* Bright orange */
+    background-color: #3498db; /* Bright blue */
     color: white;
-    padding: 0.8em 1.5em;
-    font-size: 1.1rem;
+    padding: 0.5em 1em; /* Reduced padding for smaller size */
+    font-size: 1rem; /* Slightly smaller font size */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: auto; /* Button width adjusted to fit the text */
+    display: block; /* Center the button */
+    margin: 1em auto; /* Space above and below, center horizontally */
 }
 
 .convert-btn:hover {
-    background-color: #d35400; /* Darker orange */
+    background-color: #2980b9; /* Darker blue on hover */
 }
+
 
 /* Results Box */
 .results-box {
